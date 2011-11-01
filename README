@@ -1,0 +1,44 @@
+DESCRIPTION
+-----------
+	This is the Joomla Component for the BMLT.
+	
+LICENSE
+-------
+	This code is GPLV3.
+
+INSTALLATION
+------------
+	The BMLT Joomla! plugin comes as three components: 2 plugins and a component.
+	
+	As of version 1.2.17, they are all installed and uninstalled by a single file. Simply install the "bmlt.zip" file.
+	In order to uninstall, uninstall the component only. It will take care of the plugins.
+	
+	One plugin is a system plugin, and is required for all installs. BMLT won't work
+	unless you install it and activate it.
+	
+	The other plugin is optional. It is an inline content plugin that allows you to
+	insert an HTML comment (<!--BMLT-->) or a shortcode ([[BMLT]]) into the text of an article, and a
+	BMLT search will appear there, in the same manner as the WordPress plugin.
+	
+	The component is required. It contains the administrative interface, as well as
+	some important files that are necessary for the inline content plugin to work.
+	
+USAGE
+-----
+	The component is fairly straightforward. You simply specify "option=com_bmlt"
+	in your URI, and a page opens up that is nothing but a full BMLT implementation.
+	
+	The inline plugin is a bit more involved, but gives you tremendous flexibility.
+	In order to use it, you use the HTML view of an article to enter the following HTML text:
+	<!--BMLT-->
+	or
+	[[BMLT]]
+	This will integrate the BMLT directly into your page. You will probably need to play
+	with the CSS in order to make it work properly in your page (See the commented-out section
+	in the component's style.cpp file).
+	
+CHANGELIST
+----------
+= Version 2.2 =
+* TBD
+* Moving version control to GitHub (I prefer Git as a version control system).

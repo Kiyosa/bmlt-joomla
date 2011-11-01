@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0" method="upgrade">
+	<name>BMLT</name>
+	<creationDate>2011-04-26</creationDate>
+	<author>MagShare</author>
+	<authorUrl>www.magshare.org</authorUrl>
+	<version>2.1.28</version>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description>This is a client server for the Basic Meeting List Toolbox System.</description>
+
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename>bmlt.php</filename>
+		<filename>bmlt-joomla-satellite-plugin.php</filename>
+        <filename>plugins/bmltsystem.php</filename>
+        <filename>plugins/bmltcontent.php</filename>
+        <filename>plugins/bmltsystem.xml</filename>
+        <filename>plugins/bmltcontent.xml</filename>
+        <filename>BMLT-Satellite-Base-Class/admin_javascript.js</filename>
+        <filename>BMLT-Satellite-Base-Class/admin_styles.css</filename>
+		<filename>BMLT-Satellite-Base-Class/BMLT-Satellite-Driver/bmlt_satellite_controller.class.php</filename>
+		<filename>BMLT-Satellite-Base-Class/bmlt-cms-satellite-plugin.php</filename>
+		<filename>BMLT-Satellite-Base-Class/javascript.js</filename>
+		<filename>BMLT-Satellite-Base-Class/map_search.js</filename>
+		<filename>BMLT-Satellite-Base-Class/fast_mobile_lookup.js</filename>
+        <filename>BMLT-Satellite-Base-Class/js_stripper.php</filename>
+        <filename>BMLT-Satellite-Base-Class/style_stripper.php</filename>
+        
+        <folder>BMLT-Satellite-Base-Class/admin_images</folder>
+        <folder>BMLT-Satellite-Base-Class/BMLT-Satellite-Driver</folder>
+        <folder>BMLT-Satellite-Base-Class/themes</folder>
+        <folder>BMLT-Satellite-Base-Class/google_map_images</folder>
+	</files>
+
+	<administration>
+		<menu img="components/com_bmlt/joomlaplugin.png">BMLT Options</menu>
+		<files folder="backend">
+            <filename>joomlaplugin.png</filename>
+            <filename>admin.bmlt.php</filename>
+            <filename>install.sql</filename>
+            <filename>uninstall.sql</filename>
+            <filename>index.html</filename>
+		</files>
+	</administration>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+			<file driver="mysql">install.sql</file>
+			<file charset="utf8" driver="mysqli">install.sql</file>
+			<file driver="mysqli">install.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+			<file driver="mysql">uninstall.sql</file>
+			<file charset="utf8" driver="mysqli">uninstall.sql</file>
+			<file driver="mysqli">uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<installfile>install.bmlt.php</installfile>
+	<uninstallfile>uninstall.bmlt.php</uninstallfile>
+</install>

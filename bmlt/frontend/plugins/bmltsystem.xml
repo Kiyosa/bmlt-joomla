@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - BMLT</name>
+	<authorUrl>www.magshare.org</authorUrl>
+	<version>2.1.28</version>
+	<description>A Joomla System Plugin for the BMLT</description>
+	<files folder="site">
+		<filename plugin="bmltsystem">bmltsystem.php</filename>
+	</files>
+	<params/>
+</install>
