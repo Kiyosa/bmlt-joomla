@@ -4,7 +4,7 @@
  *
  * @package		Joomla
  * @subpackage	System
- * @version		2.1.27
+ * @version		2.2
  * @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  * \license Unfortunately, Joomla won't let you put an extension in their directory unless
  * you make it GPL (ick). Because they own the playing field, I need to play by their

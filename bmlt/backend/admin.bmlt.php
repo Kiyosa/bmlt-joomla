@@ -1,6 +1,6 @@
 <?php
 /**
-* @version		2.1.28 $
+* @version		2.2 $
 * @package		Joomla
 * @subpackage	BMLT
 * @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
