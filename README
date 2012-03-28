@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+2.2.1
+    - March 28, 2012
+    - Added an alert to the new map search, so that users are informed when there were no meetings found.
+    
 2.2
     - December 31, 2011
     - Moved the Joomla plugin to GitHub
