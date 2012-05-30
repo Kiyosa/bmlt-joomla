@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+2.2.3
+    - May 30, 2012
+    - Made the installer Joomla 2.5 native.
+    
 2.2.2
     - May 13, 2012
     - Fixed a nasty bug in the admin interface that could create multiple empty settings.

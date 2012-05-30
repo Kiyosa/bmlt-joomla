@@ -62,7 +62,7 @@ function AddPlugin ( $basePath,	///< The filesystem path to the directory contai
         }
     
     if ( $success )
-            {
+        {
         if ( JFolder::exists ( $dest_dir ) )
             {
             foreach( $files as $pluginFile)
@@ -115,11 +115,19 @@ function AddPlugin ( $basePath,	///< The filesystem path to the directory contai
             . " '{$shConfig['published']}', '{$shConfig['client_id']}', '{$shConfig['checked_out']}',"
             . " '{$shConfig['checked_out_time']}', '{$shConfig['params']}');";
             }
-        else
+        elseif( version_compare( JVERSION, '1.5.0', 'ge' ) )
             {
             $sql="INSERT INTO `#__plugins` ( `name`, `element`, `folder`, `access`, `ordering`, `published`,"
             . " `iscore`, `client_id`, `checked_out`, `checked_out_time`, `params`)"
             . " VALUES ('{$shConfig['name']}', '{$shConfig['element']}', '{$shConfig['folder']}', '{$shConfig['access']}', '{$shConfig['ordering']}',"
+            . " '{$shConfig['published']}', '{$shConfig['iscore']}', '{$shConfig['client_id']}', '{$shConfig['checked_out']}',"
+            . " '{$shConfig['checked_out_time']}', '{$shConfig['params']}');";
+            }
+        elseif( version_compare( JVERSION, '2.5.0', 'ge' ) )
+            {
+            $sql="INSERT INTO `#__extensions` ( `name`, `type`, `element`, `folder`, `access`, `ordering`, `published`,"
+            . " `iscore`, `client_id`, `checked_out`, `checked_out_time`, `params`)"
+            . " VALUES ('{$shConfig['name']}', 'plugin', '{$shConfig['element']}', '{$shConfig['folder']}', '{$shConfig['access']}', '{$shConfig['ordering']}',"
             . " '{$shConfig['published']}', '{$shConfig['iscore']}', '{$shConfig['client_id']}', '{$shConfig['checked_out']}',"
             . " '{$shConfig['checked_out_time']}', '{$shConfig['params']}');";
             }
@@ -181,8 +189,11 @@ function com_install()
 			echo ( '<span style="color:#090;font-weight:bold">Successfully installed the BMLT system plugin</span><br />' );
 			if ( InstallContentPlugin() )
 				{
-		        JFolder::delete ( JPATH_ROOT . DS .'components' . DS.'com_bmlt'. DS.'plugins' );
-		        JFile::delete ( JPATH_ADMINISTRATOR . DS .'components' . DS.'com_bmlt'. DS.'install.sql' );
+                if( version_compare( JVERSION, '2.5.0', 'l' ) )
+                    {
+		            JFolder::delete ( JPATH_ROOT . DS .'components' . DS.'com_bmlt'. DS.'plugins' );
+		            JFile::delete ( JPATH_ADMINISTRATOR . DS .'components' . DS.'com_bmlt'. DS.'install.sql' );
+		            }
 				echo ( '<span style="color:#090;font-weight:bold">Successfully installed the BMLT content plugin.</span>' );
 				JFile::delete(__FILE__);
 				}

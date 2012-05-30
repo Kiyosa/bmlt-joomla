@@ -5,7 +5,7 @@
 	<creationDate>2011-04-26</creationDate>
 	<author>MagShare</author>
 	<authorUrl>www.magshare.org</authorUrl>
-	<version>2.2.2</version>
+	<version>2.2.3</version>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<description>This is a client server for the Basic Meeting List Toolbox System.</description>
 
@@ -29,8 +29,9 @@
         
         <folder>BMLT-Satellite-Base-Class/admin_images</folder>
         <folder>BMLT-Satellite-Base-Class/BMLT-Satellite-Driver</folder>
-        <folder>BMLT-Satellite-Base-Class/themes</folder>
         <folder>BMLT-Satellite-Base-Class/google_map_images</folder>
+        <folder>BMLT-Satellite-Base-Class/lang</folder>
+        <folder>BMLT-Satellite-Base-Class/themes</folder>
 	</files>
 
 	<administration>
