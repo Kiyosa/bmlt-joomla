@@ -426,6 +426,7 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                         }
                     
                     $document->addStylesheet ( "$local_style_url"."styles.css", 'text/css' );
+                    $document->addStylesheet ( "$local_style_url"."nouveau_map_styles.css", 'text/css' );
                     }
                 catch ( Exception $e )
                     {

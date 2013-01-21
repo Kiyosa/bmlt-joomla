@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0
+    - TBD
+    - Major rewrite with new default shortcode.
+    
 2.2.3
     - May 30, 2012
     - Made the installer Joomla 2.5 native.
