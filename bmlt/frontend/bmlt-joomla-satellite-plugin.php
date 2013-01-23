@@ -358,8 +358,6 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                     }
 
                 $document->addScript ( $url.'javascript.js' );
-                $document->addScript ( $url.'fast_mobile_lookup.js' );
-                $document->addScript ( $url.'nouveau_map_search.js' );
                 
                 $uri = "$root_server?switcher=GetHeaderXHTML&style_only$params";
                 try
