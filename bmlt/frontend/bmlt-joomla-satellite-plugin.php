@@ -350,18 +350,9 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                         }
                     }
                 
-                $url = $this->get_plugin_path();
-                
-                if ( !defined ('_DEBUG_MODE_' ) )
-                    {
-                    $url .= 'js_stripper.php?filename=';
-                    }
-
-                $document->addScript ( $url.'javascript.js' );
-                
-                $uri = "$root_server?switcher=GetHeaderXHTML&style_only$params";
                 try
                     {
+                    $uri = "$root_server?switcher=GetHeaderXHTML&style_only$params";
                     $header_code = preg_replace ( '/[^\.\,\;= a-zA-Z0-9\&\?\-_\#:\/\\\]/', '', $this->my_driver->call_curl ( $uri, false ) );
             
                     $styles = explode ( " ", $header_code );
