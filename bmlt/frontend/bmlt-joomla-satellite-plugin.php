@@ -313,9 +313,6 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                 
                 $root_server = $root_server_root."/client_interface/xhtml/index.php";
                     
-                $this->my_http_vars['gmap_key'] = $options['gmaps_api_key'];
-                $this->my_http_vars['start_view'] = $options['bmlt_initial_view'];
-            
                 if ( !is_array ( $this->my_http_vars ) || (!isset ( $this->my_http_vars['search_form'] ) && !isset ( $this->my_http_vars['single_meeting_id'] ) && !isset ( $this->my_http_vars['do_search'] )) )
                     {
                     $this->my_http_vars['search_form'] = true;
@@ -353,44 +350,16 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                         }
                     }
                 
-                if ( !$in_content || $this->get_shortcode ( $in_content, 'bmlt' ) ) // We only get the header scripts if we are using the old BMLT setup.
-                    {
-                    $uri = "$root_server?switcher=GetHeaderXHTML&script_only$params";
-                    try
-                        {
-                        $header_code = preg_replace ( '/[^\.\,\;= a-zA-Z0-9\&\?\-_\#:\/\\\]/', '', $this->my_driver->call_curl ( $uri, false ) );
+                $url = $this->get_plugin_path();
                 
-                        $scripts = explode ( " ", $header_code );
-                        foreach ( $scripts as $uri2 )
-                            {
-                            $root_server_root2 = $root_server_root;
-                            
-                            if ( preg_match ( '|http://|', $uri2 ) )
-                                {
-                                $root_server_root2 = '';
-                                }
-                            
-                            $document->addScript ( "$root_server_root2$uri2" );
-                            }
-                        }
-                    catch ( Exception $e )
-                        {
-                        die ( "BMLT Error: ".htmlspecialchars ( $e ) );
-                        }
-                    }
-                else
+                if ( !defined ('_DEBUG_MODE_' ) )
                     {
-                    $url = $this->get_plugin_path();
-                    
-                    if ( !defined ('_DEBUG_MODE_' ) )
-                        {
-                        $url .= 'js_stripper.php?filename=';
-                        }
-                    
-                    $url .= 'javascript.js';
-    
-                    $document->addScript ( $url );
+                    $url .= 'js_stripper.php?filename=';
                     }
+
+                $document->addScript ( $url.'javascript.js' );
+                $document->addScript ( $url.'fast_mobile_lookup.js' );
+                $document->addScript ( $url.'nouveau_map_search.js' );
                 
                 $uri = "$root_server?switcher=GetHeaderXHTML&style_only$params";
                 try
@@ -433,15 +402,7 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                     die ( "BMLT Error: ".htmlspecialchars ( $e ) );
                     }
             
-                $style_overloads = '.bmlt_container * {margin:0;padding:0 }';
-                $style_overloads .= 'table#bmlt_container a.c_comdef_search_specification_map_vis_a,table#bmlt_container a.c_comdef_search_specification_map_invis_a{padding-left: 20px}';
-                $style_overloads .= 'table#bmlt_container  div#c_comdef_search_specification_search_string_line,table#bmlt_container  div#c_comdef_search_specification_search_string_line .search_check_div{text-align:center}';
-                if ( $options['push_down_more_details'] )
-                    {
-                    $style_overloads .= 'table#bmlt_container div.c_comdef_search_results_single_ajax_div{position:static;margin:0;width:100%;}';
-                    $style_overloads .= 'table#bmlt_container div.c_comdef_search_results_single_close_box_div{position:relative;left:100%;margin-left:-18px;}';
-                    $style_overloads .= 'table#bmlt_container div#bmlt_contact_us_form_div{position:static;width:100%;margin:0;}';
-                    }
+                $style_overloads = '';
                 
                 if ( trim ( $options['additional_css'] ) )
                     {
