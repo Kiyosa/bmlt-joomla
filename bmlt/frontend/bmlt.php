@@ -1,6 +1,6 @@
 <?php
 /**
-* @version		3.0 $
+* @version		3.0.3 $
 * @package		Joomla
 * @subpackage	BMLT
 * @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -40,6 +40,6 @@ global $BMLTPluginOp;
 if ( $BMLTPluginOp instanceof BMLTJoomlaPlugin )
     {
     $BMLTPluginOp->standard_head();
-    echo $BMLTPluginOp->display_old_search('[[bmlt]]');
+    echo $BMLTPluginOp->display_bmlt_nouveau('[[bmlt]]');
     }
 ?>

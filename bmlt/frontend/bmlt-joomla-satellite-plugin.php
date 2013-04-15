@@ -3,7 +3,7 @@
 *   \file   bmlt-joomla-satellite-plugin.php                                                *
 *                                                                                           *
 *   \brief  This is a Joomla plugin of a BMLT satellite client.                             *
-*   \version 3.0                                                                            *
+*   \version 3.0.3                                                                          *
 *   @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 *   \license Unfortunately, Joomla won't let you put an extension in their directory unless *
 *   you make it GPL (ick). Because they own the playing field, I need to play by their      *
@@ -34,6 +34,11 @@
 
 if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-satellite-plugin.php' ) )
     {
+    global $bmlt_localization;  ///< Use this to control the localization.
+    
+    $language = JFactory::getLanguage();
+    $bmlt_localization = substr ( $language->getTag(), 0, 2 );
+        
     require_once ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-satellite-plugin.php' );
     
     JTable::addIncludePath(JPATH_ADMINISTRATOR.DS.'components'.DS.'com_bmlt'.DS.'tables');
