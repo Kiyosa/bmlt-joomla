@@ -40,7 +40,7 @@ USAGE
 CHANGELIST
 ----------
 3.0.3
-    - April 14, 2013
+    - April 15, 2013
     - Fixed a couple of localization bugs. Now query Joomla for the localization tag.
     
 3.0
