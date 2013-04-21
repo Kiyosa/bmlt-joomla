@@ -3,11 +3,7 @@
 *   \file   bmlt-joomla-satellite-plugin.php                                                *
 *                                                                                           *
 *   \brief  This is a Joomla plugin of a BMLT satellite client.                             *
-<<<<<<< HEAD
 *   \version 3.0.3                                                                          *
-=======
-*   \version 3.0.1                                                                          *
->>>>>>> 8c45e3c8af05694f16b3220fe2fb99fc02e00ef1
 *   @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 *   \license Unfortunately, Joomla won't let you put an extension in their directory unless *
 *   you make it GPL (ick). Because they own the playing field, I need to play by their      *
