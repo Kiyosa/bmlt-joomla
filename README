@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.8
+    - April 28, 2013
+    - Added support for display of military time.
+    
 3.0.3
     - April 15, 2013
     - Fixed a couple of localization bugs. Now query Joomla for the localization tag.
