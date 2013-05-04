@@ -1,4 +1,3 @@
 [submodule "bmlt/frontend/BMLT-Satellite-Base-Class"]
 	path = bmlt/frontend/BMLT-Satellite-Base-Class
-	url = git://github.com/MAGSHARE/BMLT-Satellite-Base-Class.git
-	ignore = dirty
+url=https://bitbucket.org/bmlt/bmlt-satellite-base-class.git
