@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.9
+    - May 4, 2013
+    - Fixed some warnings.
+    
 3.0.8
     - April 28, 2013
     - Added support for display of military time.
