@@ -1,6 +1,6 @@
 <?php
 /**
-* @version		3.0.8 $
+* @version		3.0.10 $
 * @package		Joomla
 * @subpackage	BMLT
 * @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -10,7 +10,6 @@
 * http://magshare.org/bmlt
 * \file com_bmlt/bmlt.php
 * \brief This implements a simple Joomla! component that displays a BMLT meeting search.
-* \version 2.2.1
     
     This file is part of the Basic Meeting List Toolbox (BMLT).
     

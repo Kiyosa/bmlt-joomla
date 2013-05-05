@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.10
+    - May 5, 2013
+    - Fixed a bug, in which the initial search results map would show too many "red" markers.
+    
 3.0.9
     - May 4, 2013
     - Fixed some warnings.
