@@ -3,7 +3,7 @@
 *   \file   bmlt-joomla-satellite-plugin.php                                                *
 *                                                                                           *
 *   \brief  This is a Joomla plugin of a BMLT satellite client.                             *
-*   \version 3.0.8                                                                          *
+*   \version 3.0.10                                                                         *
 *   @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 *   \license Unfortunately, Joomla won't let you put an extension in their directory unless *
 *   you make it GPL (ick). Because they own the playing field, I need to play by their      *
@@ -131,7 +131,7 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
             $ret = null;
             $row_data = null;
     
-            $row =& JTable::getInstance ( 'bmlt_settings', 'Table' );
+            $row = JTable::getInstance ( 'bmlt_settings', 'Table' );
             $data_array = array ( $this->geDefaultBMLTOptions() );
     
             if ( $row->load ( 1 ) )
@@ -325,7 +325,7 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
                 
                 $params = '';
                 
-                if ( !defined ( $support_old_browsers ) || !$support_old_browsers )
+                if ( !isset ( $support_old_browsers ) || !$support_old_browsers )
                     {
                     $this->my_http_vars['supports_ajax'] = 'yes';
                     $this->my_http_vars['no_ajax_check'] = 'yes';
@@ -417,7 +417,7 @@ if ( file_exists ( dirname ( __FILE__ ).'/BMLT-Satellite-Base-Class/bmlt-cms-sat
         ****************************************************************************************/
         function admin_head ( )
             {
-            $document =& JFactory::getDocument();
+            $document = JFactory::getDocument();
             
             $comp_path = JURI::root().'components/com_bmlt/BMLT-Satellite-Base-Class';
             
