@@ -39,6 +39,11 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.11
+    - May 13, 2013
+    - Reduced the number of times that the marker redraw is called in the standard [[bmlt]] shortcode handler.
+    - Fixed an issue with CSS that caused displayed maps to get funky.
+
 3.0.10
     - May 5, 2013
     - Fixed a bug, in which the initial search results map would show too many "red" markers.

@@ -2,7 +2,7 @@
 /**
  * @package		Joomla
  * @subpackage	Content
- * @version		3.0.10
+ * @version		3.0.11
  * @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  * \license Unfortunately, Joomla won't let you put an extension in their directory unless you make it GPL (ick). Because they own the playing field, I need to play by their rules. However, the huge bulk of the BMLT project is totally open, and available at http://magshare.org/bmlt
  * \file com_bmlt/bmltcontent.php
