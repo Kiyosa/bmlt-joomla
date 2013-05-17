@@ -39,6 +39,10 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.12
+    - May 16, 2013
+    - Just some tweaks to reduce warnings and notices for uptight PHP servers.
+
 3.0.11
     - May 13, 2013
     - Reduced the number of times that the marker redraw is called in the standard [[bmlt]] shortcode handler.
