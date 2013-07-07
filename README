@@ -39,6 +39,15 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.17
+    - July 1, 2013
+    - Corrected German localization.
+    - Added the ability to specify which day weeks begin (in Europe, it is common for weeks to begin on Monday).
+
+3.0.16
+    - May 22, 2013
+    - Added German localization.
+
 3.0.15
     - May 19, 2013
     - Fixed a small issue, in which entering text into the CSS field in the admin window would not "dirtify" the settings.
