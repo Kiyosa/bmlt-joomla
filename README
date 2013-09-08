@@ -39,6 +39,11 @@ USAGE
 	
 CHANGELIST
 ----------
+3.0.18
+    - September 7, 2013
+    - More tweaks to German localization.
+    - Fixed some JavaScript issues with the [[bmlt_mobile]] shortcode.
+    
 3.0.17
     - July 1, 2013
     - Corrected German localization.
